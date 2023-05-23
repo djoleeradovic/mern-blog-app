@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+
+:root {
+  --color-primary: #222222;
+  --color-secondary: #111111;
+  --color-danger: #f44336;
+  --color-blue: #2351b6;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --container-width-lg: 70%;
+  --container-width-md: 90%;
+  --container-width-sm: 95%;
+
+  --transition: all 400ms ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+}
+
+body {
+  background: var(--color-primary);
+  height: 100vh;
+}
+
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+a {
+  color: var(--color-white);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--color-blue);
+}
+
+.desktop {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  justify-content: space-between;
+  padding: 1rem;
+  background: var(--color-secondary);
+  height: 5rem;
+}
+
+svg {
+  cursor: pointer;
+  color: var(--color-white);
+  transition: var(--transition);
+}
+
+svg:hover {
+  color: var(--color-blue);
+}
+
+.desktop .nav-items {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.desktop .nav-items .settings-menu {
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  background: var(--color-secondary);
+  padding: 1rem;
+  width: 15rem;
+  border-radius: 1rem;
+}
+
+.desktop .nav-items .settings-menu h3 {
+  background: var(--color-primary);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.delete {
+  background: var(--color-danger);
+}
+
+.delete:hover {
+  background: transparent;
+  border: 2px solid var(--color-danger);
+}
+
+.mobile {
+  display: none;
+}
+
+button {
+  background: var(--color-blue);
+  color: var(--color-white);
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: var(--transition);
+  width: auto;
+}
+
+button:hover {
+  background: transparent;
+  border: 2px solid var(--color-blue);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 40%;
+  height: 90vh;
+  row-gap: 1rem;
+  text-align: left;
+}
+
+form h1 {
+  color: var(--color-blue);
+  font-weight: 700;
+}
+
+form label {
+  color: var(--color-white);
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+form input {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.error {
+  border: 1px solid var(--color-danger);
+  padding: 1rem;
+  color: var(--color-danger);
+  margin-top: 1rem;
+}
+
+form textarea {
+  height: 15rem;
+  resize: none;
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.blogs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  margin-top: 5rem;
+}
+
+.blog {
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 2px solid var(--color-blue);
+  border-radius: 1rem;
+  background: var(--color-secondary);
+  color: var(--color-white);
+  padding: 1rem;
+  flex: 1;
+  min-height: 350px;
+  max-width: 400px;
+  min-width: 400px;
+}
+
+.blog h1 {
+  color: var(--color-blue);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.blog p {
+  height: 80%;
+  text-align: justify;
+}
+
+.blog footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.blog .buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.blog footer a:hover {
+  color: var(--color-blue);
+}
+
+.blog-page {
+  margin-top: 5rem;
+  background: var(--color-secondary);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.edit-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.edit-modal svg {
+  color: var(--color-white);
+  position: absolute;
+  top: 10rem;
+  right: 10rem;
+  font-size: 3rem;
+}
+
+.edit-modal form input textarea button {
+  width: 25rem;
+}
+
+.blog-page .header {
+  text-align: center;
+  margin-bottom: 5rem;
+  color: var(--color-blue);
+}
+
+.blog-page span {
+  text-align: right;
+  color: var(--color-white);
+}
+
+.blog-page p {
+  text-align: justify;
+  color: var(--color-white);
+  padding: 1rem;
+}
+
+.blog-page .buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.user-profile h2 {
+  color: var(--color-white);
+  text-align: center;
+  margin-top: 1rem;
+  background: var(--color-blue);
+  border-radius: 1rem;
+}
+
+.blog-page .add-comment {
+  display: flex;
+  flex: 1;
+  margin-top: 1rem;
+}
+
+.blog-page .add-comment input {
+  width: 100%;
+  padding: 1rem;
+  background: var(--color-secondary);
+  border: 2px solid var(--color-blue);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color: var(--color-white);
+}
+
+.blog-page .add-comment button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--color-secondary);
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  gap: 1rem;
+}
+
+.comments h2 {
+  color: var(--color-blue);
+}
+
+.comments .comment {
+  color: var(--color-white);
+  background: var(--color-primary);
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+
+  form {
+    width: 80%;
+  }
+
+  .blogs {
+    justify-content: center;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: var(--color-secondary);
+    height: 5rem;
+  }
+
+  .mobile .nav-items {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 5rem;
+    right: 0;
+    background: var(--color-secondary);
+    color: var(--color-white);
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    width: 15rem;
+    border-radius: 1rem;
+  }
+  .mobile .nav-items h3 {
+    background: var(--color-primary);
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 1rem;
+  }
+
+  .mobile-user {
+    color: var(--color-white);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-items-actions {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .edit-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .edit-modal form {
+    width: 90%;
+  }
+
+  .edit-modal svg {
+    color: var(--color-white);
+    position: absolute;
+    top: 7rem;
+    right: 3rem;
+    font-size: 2rem;
+  }
+
+  .edit-modal form input textarea button {
+    width: 100%;
+  }
+
+  .blog-page .header {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+  .blogs {
+    margin-top: 2rem;
+  }
+  .blog {
+    max-width: 100%;
+    min-width: 90%;
+  }
+}
